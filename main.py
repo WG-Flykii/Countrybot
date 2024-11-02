@@ -16,7 +16,6 @@ ping_role_id =     # daily challenge ping role
 winner_role_id =   # winner role
 
 
-# Variables to store original location and challenge state
 original_lat = None
 original_lon = None
 challenge_active = False
@@ -91,7 +90,7 @@ async def on_message(message):
             image_url = message.attachments[0].url
 
             now = datetime.now(timezone.utc)
-            start_time = now.replace(hour=17, minute=0, second=0, microsecond=0)
+            start_time = now.replace(hour=17, minute=0, second=0, microsecond=0) # 18:00 cet paris time
             if now >= start_time:
                 start_time += timedelta(days=1)
             start_time_paris = start_time + timedelta(hours=1)
