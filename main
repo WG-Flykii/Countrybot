@@ -38,8 +38,8 @@ def haversine(lat1, lon1, lat2, lon2):
 def format_distance(distance_m):
     """Format the distance in meters, kilometers, miles, and feet."""
     distance_km = distance_m / 1000
-    distance_miles = distance_km * 0.621371  # Convert km to miles
-    distance_feet = distance_m * 3.28084      # Convert meters to feet
+    distance_miles = distance_km * 0.621371  # km to miles
+    distance_feet = distance_m * 3.28084      # meters to feet
 
     if distance_m >= 1000:
         return f"{round(distance_km)}Km ({round(distance_miles)} Miles)"
